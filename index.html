@@ -39,30 +39,113 @@
         font-family: Arial, sans-serif; /* A basic, clean font */
         border-radius: 5px; /* Slight rounding of corners for aesthetics */
       }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        background: #90ee90;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav li {
+        padding-left: 1rem;
+      }
     </style>
   </head>
   <body>
     <header>
       <h1>Welcome to Julian Rahimi's Website</h1>
       <nav>
-        <a href="#introduction">Go to Main Content</a>
-        <a href="#aside-content">Go to Side Content</a>
+        <ul>
+          <li>
+            <a href="#home"><code>Home</code></a>
+          </li>
+          <li>
+            <a href="#portfolio"><code>Portfolio</code></a>
+          </li>
+          <li>
+            <a href="#about"><code>About</code></a>
+          </li>
+          <li>
+            <a href="#contact-info"><code>Contact</code></a>
+          </li>
+        </ul>
       </nav>
     </header>
 
     <main id="main-content">
-      <section id="introduction">
-        <h2>Introduction</h2>
-        <p>
-          Welcome I am Julian Rahimi an Information Systems Master's student
-          <br />
-          at the Technical University of Munich.
-          <br />
-          Feel free to get in touch.
-        </p>
+      <section id="home">
+        <div>
+          <h2>Introduction</h2>
+          <picture
+            ><img
+              src="coffee.jpg"
+              alt="Julian Rahimi"
+              height="150"
+              width="100"
+              style="float: left; margin-right: 12px"
+            />
+          </picture>
+          <pre>
+        <em>
+        Julian Rahimi is an <span style="font-weight: bold;">Information Systems Master's student</span> studying at the Technical University of Munich. 
+                He is currently pursuing his studies abroad at the University of California, San Diego.
+        </em>
+         </pre>
+          <pre>
+            <em>Julian is passionate about technology and looks forward to starting his career after completing his
+                    9-month study abroad program.
+                </em>
+          </pre>
+        </div>
       </section>
-
+      <hr />
+      <h2 id="portfolio"><i>Portfolio</i></h2>
       <section>
+        <h4>Github Overview</h4>
+        <figure>
+          <img
+            src="creative-commons-nd.svg"
+            alt="Project 1"
+            height="48"
+            width="48"
+            style="float: left; margin-right: 12px"
+          />
+          <figcaption>Project 1 - Blockchain LAB at TUM</figcaption>
+        </figure>
+        <button
+          onclick="window.location.href='https://github.com/ju-ra-96/crypto.git';"
+        >
+          Click Here To See it
+        </button>
+        <figure>
+          <img
+            src="briefcase-solid.svg"
+            alt="Project 2"
+            height="48"
+            width="48"
+            style="float: left; margin-right: 12px"
+          />
+          <figcaption>Project 2 - EasyPick SEBA TUM project</figcaption>
+        </figure>
+        <button
+          onclick="window.location.href='https://github.com/ju-ra-96/EasyPick-sample-frontend.git'"
+        >
+          Click Here To See to the Frontend
+        </button>
+        <button
+          style="background-color: blue; color: white"
+          onclick="window.location.href='https://github.com/ju-ra-96/EasyPick-sample-backend.git'"
+        >
+          Click Here To See to the Backend
+        </button>
+      </section>
+      <hr />
+      <section id="about">
         <h2>Content Section</h2>
         <h3>Subsection</h3>
         <h4>Details of the subsection</h4>
@@ -182,6 +265,56 @@
         </tr>
       </tbody>
     </table>
+    <aside>
+      <h2 id="contact-info"><i>Contact Information</i></h2>
+      <form>
+        <label for="contact">Choose a contact method:</label>
+        <select name="contact" id="contact">
+          <optgroup label="Call">
+            <option value="phone">Phone</option>
+          </optgroup>
+          <optgroup label="Write">
+            <option value="email">Email</option>
+          </optgroup>
+        </select>
+        <br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+      <p><a href="mailto:rahimi.julian@yahoo.de">Send me an Email</a></p>
+      <p>
+        LinkedIn:
+        <a
+          href="https://de.linkedin.com/in/julian-rahimi"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Julian Rahimi's LinkedIn Profile</a
+        >
+      </p>
+      <h3><strong>Send me a message</strong></h3>
+      <!-- Form Tags -->
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <fieldset>
+          <legend>Choose your preferred language:</legend>
+          <input
+            type="radio"
+            id="english"
+            name="language"
+            value="english"
+            checked
+          />
+          <label for="english">English</label><br />
+          <input type="radio" id="german" name="language" value="german" />
+          <label for="german">German</label><br />
+        </fieldset>
+        <label for="comments">Message:</label>
+        <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+        <label for="favoriteColor">Favorite color:</label>
+        <input type="color" id="favoriteColor" name="favoriteColor" />
+        <input type="submit" value="Submit" />
+      </form>
+    </aside>
     <details>
       <summary>Sample Details</summary>
       <p>Details content goes here.</p>
@@ -271,7 +404,11 @@
       </g>
     </svg>
     <footer>
-      <p>&copy; 2023 Sample Website. All rights reserved.</p>
+      <div>
+        <p>
+          <code> &copy; 2023 Julian Rahimi. All rights reserved. </code>
+        </p>
+      </div>
     </footer>
   </body>
 </html>
