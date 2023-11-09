@@ -1,0 +1,1486 @@
+:root {
+  /* Fallback colors */
+  --primary-color-fallback: #4caf50;
+  --secondary-color-fallback: #f5f5f5;
+  --text-color-fallback: #333333;
+  --footer-background-fallback: #333333;
+
+  /* Colors using color() and color-mix() functions with wider gamut */
+  --primary-color: color(display-p3 0.3 0.59 0.25); /* fallback for green */
+  --secondary-color: color(
+    display-p3 0.97 0.97 0.97
+  ); /* fallback for off-white */
+  --text-color: color(display-p3 0.2 0.2 0.2); /* fallback for dark grey */
+  --footer-background: color(
+    display-p3 0.2 0.2 0.2
+  ); /* fallback for footer bg */
+  --button-hover-color: color-mix(
+    in srgb,
+    var(--primary-color) 70%,
+    var(--secondary-color) 30%
+  );
+  --button-base-hover: color-mix(in srgb, var(--primary-color) 70%, var(--secondary-color) 30%);
+
+
+  /* Font sizes */
+  --base-font-size: 16px;
+  --heading-font-size: 2rem;
+  --subheading-font-size: 1.5rem;
+  --text-font-size: 1rem;
+
+  /* Spacing */
+  --base-margin: 1rem;
+  --base-padding: 1rem;
+
+  /* Borders */
+  --border-radius: 5px;
+
+  /* Fonts */
+  --font-family: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-family, Arial, sans-serif);
+  font-size: var(--base-font-size, 16px);
+  color: var(--text-color);
+  color: var(--text-color-fallback);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--primary-color, green);
+  color: var(--text-color, white);
+  color: var(--text-color-fallback);
+  padding: var(--base-padding, 1em);
+  text-align: center;
+  border-radius: var(--border-radius, 5px);
+}
+
+h1 {
+  font-size: var(--heading-font-size, 2em);
+}
+
+h2 {
+  font-size: var(--subheading-font-size, 1.5em);
+  margin-top: var(--base-margin, 1rem);
+}
+
+p {
+  font-size: var(--text-font-size, 1em);
+  margin-bottom: var(--base-margin, 1rem);
+}
+
+footer {
+  background-color: var(--footer-background, #333);
+  color: var(--text-color);
+  color: var(--text-color-fallback);
+  padding: var(--base-padding, 1em);
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-menu li {
+  margin-left: 2vw;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.navbar-menu li a::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #f9ca24;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.navbar-menu li a:hover::after {
+  transform: scaleX(1);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,500&display=swap");
+
+/* Apply Roboto Mono to the body, with fallbacks */
+body {
+  font-family: "Roboto Mono", monospace; /* Fallback to monospace if Roboto Mono doesn't load */
+}
+
+.typewriter h1 {
+  color: white;
+  font-size: 1rem;
+  font-family: monospace, "Montserrat", Arial, sans-serif;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em;
+  text-align: center;
+  /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("./freq.png");
+
+  /* Full height */
+  height: 50vh;
+  width: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  position: relative;
+}
+
+.navbar-logo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50px; /* You can adjust the size as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: orange;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Select the first two <p> elements and hide them */
+  .typewriter h1 {
+    font-size: 0.45rem;
+    /* Adjust font size for small screens */
+  }
+
+  p:nth-of-type(-n + 2) {
+    display: none;
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+body {
+  font-size: 1rem;
+}
+
+header {
+  padding: 1em; /* 1em is based on the font-size of the element */
+}
+
+nav ul {
+  justify-content: space-around; /* Distribute navigation items evenly */
+}
+
+nav li {
+  padding-left: 1em; /* Use em to scale padding with font size */
+}
+
+/* Use vh/vw for dimensions to make them viewport-size relative */
+.parallax {
+  height: 50vh; /* Use viewport height to scale with the window size */
+}
+
+img.navbar-logo {
+  width: 40px; /* Scale the logo width with the viewport width */
+  height: auto; /* Keep the aspect ratio of the logo */
+}
+
+.typewriter h1 {
+  font-size: 2.5rem; /* Increase base font-size for larger displays */
+}
+
+/* Replace absolute px units with em for padding, margins, and borders */
+button,
+figure,
+img {
+  margin: 1em 0;
+  padding: 0.5em;
+}
+
+/* Use percentages for widths to make layout flexible */
+main,
+footer,
+aside,
+section {
+  width: 100%; /* Use 100% width for main layout elements */
+}
+
+/* Image inside the main section */
+main img {
+  max-width: 100%; /* Make images responsive */
+  height: auto;
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem; /* Smaller font size on smaller screens */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack nav items vertically on small screens */
+  }
+
+  img.navbar-logo {
+    width: 20vw; /* Larger relative logo size on smaller screens */
+  }
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+header {
+  background-color: #4caf50;
+  padding: 1em;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  max-height: 50px; /* Adjust the size of the logo */
+  width: auto;
+}
+
+.navbar-menu li {
+  padding: 0;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Typography enhancements */
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* Image responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Button styling */
+button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "sans-serif";
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f0f0; /* Light background color */
+}
+
+header {
+  background-color: #4caf50;
+  padding: 1em;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border-radius: 5px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 5vh; /* Dynamic height based on viewport */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.navbar-logo a {
+  display: flex; /* Use flexbox for centering the logo */
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Set height to fill parent */
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  padding: 0 1rem;
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1vw;
+  font-size: 1.25vw;
+}
+
+header {
+  background-color: #4caf50;
+  padding: 0; /* No padding here to allow full control within the nav */
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border-radius: 5px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the items for better visual appeal */
+  align-items: center;
+}
+
+footer {
+  background-color: #4caf50;
+  text-align: center;
+  padding: 2dvh 0; /* Dynamic padding based on viewport height */
+}
+
+footer a {
+  color: white;
+  font-size: 2.5dvh; /* Dynamic font size based on viewport height */
+  margin: 0 1dvw; /* Dynamic margin based on viewport width */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "sans-serif";
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f0f0; /* Light background color */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+.container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+  animation: movedown 1s linear forwards;
+  opacity: 0;
+}
+
+@keyframes movedown {
+  0% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.container:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.container:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.container:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.container:nth-child(4) {
+  animation-delay: 3s;
+}
+
+.container:nth-child(5) {
+  animation-delay: 4s;
+}
+
+.container:nth-child(6) {
+  animation-delay: 5s;
+}
+
+.text-box {
+  padding: 20px 30px;
+  background: #2e364a; /* Dark background color */
+  position: relative;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #fff; /* Light font color */
+}
+
+.left-container {
+  left: 0;
+}
+
+.right-container {
+  left: 50%;
+}
+
+.container img {
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  right: -20px;
+  top: 32px;
+  z-index: 10;
+}
+
+.right-container img {
+  left: -20px;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #2e364a; /* Dark color for the line */
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+  animation: moveline 6s linear forwards;
+}
+
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.text-box h2 {
+  font-weight: 600;
+}
+
+.text-box small {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.left-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #2e364a; /* Dark color for the arrow */
+  right: -15px;
+}
+
+.right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #2e364a; /* Dark color for the arrow */
+  left: -15px;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline {
+    margin: 50px auto;
+  }
+  .timeline::after {
+    left: 31px;
+  }
+  .container {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+  .text-box {
+    font-size: 13px;
+  }
+  .text-box small {
+    margin-bottom: 10px;
+  }
+  .right-container {
+    left: 0;
+  }
+
+  .left-container img,
+  right-container img {
+    left: 10px;
+  }
+
+  .left-container-arrow,
+  .right-container-arrow {
+    border-right: 15px solid #2e364a; /* Dark color for the arrow */
+    border-left: 0;
+    left: -15px;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: slide-down 1s ease forwards;
+}
+
+#portfolio {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f1f4fb;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.project img {
+  margin-right: 12px;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-info h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #1c3faa;
+}
+
+.project-info p {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #2c3e50;
+}
+
+.project-info button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #1c3faa;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.project-info button:hover {
+  background-color: #0d255d;
+}
+
+.project-info button:last-child {
+  background-color: blue;
+}
+
+.project-info button:last-child:hover {
+  background-color: #1c3faa;
+}
+
+section.about {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+table.education-table {
+  width: 80%;
+  max-width: 800px;
+  margin: 2vh;
+  border-collapse: collapse;
+  background-color: #f1f4fb;
+  color: #2c3e50;
+  font-family: "Poppins", Arial, sans-serif;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+}
+
+table.education-table th,
+table.education-table td {
+  padding: 0.8vw;
+  text-align: left;
+  border: 0.1vw solid #333;
+}
+
+table.education-table th {
+  background-color: #1c3faa;
+  font-weight: bold;
+  color: #fff;
+}
+
+table.education-table tr:hover {
+  background-color: #e3e8f4;
+  cursor: pointer;
+}
+
+table.education-table td:last-child {
+  text-align: center;
+}
+
+ul.work-experience-list {
+  font-family: "Poppins", Arial, sans-serif;
+  list-style: none;
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+ul.work-experience-list li {
+  padding: 20px;
+  background-color: #111;
+  color: #f9f9f9;
+  border-radius: 10px;
+  margin-bottom: 2vh;
+}
+
+ul.work-experience-list h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+ul.work-experience-list p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+ul.work-experience-list ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+ul.work-experience-list li ul li {
+  list-style-type: disc;
+}
+
+ul.work-experience-list li:hover {
+  background-color: #1c3faa;
+  cursor: pointer;
+}
+
+label[for="contact"] {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Contact method selection dropdown */
+#contact {
+  padding: 8px;
+  border: 2px solid #1c3faa;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
+  background-color: #111;
+  color: white;
+}
+
+/* Submit button */
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #1c3faa;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #1c3faa;
+}
+
+/* Name input field */
+label[for="name"] {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input#name {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Preferred language radio buttons */
+fieldset {
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Message textarea */
+label[for="comments"] {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+textarea#comments {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Favorite color input */
+label[for="favoriteColor"] {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input#favoriteColor {
+  width: 100%;
+  padding: 8px;
+}
+
+/* Email link */
+a[href^="mailto:"] {
+  color: #1c3faa;
+  text-decoration: none;
+}
+
+a[href^="mailto:"]:hover {
+  text-decoration: underline;
+}
+
+/* LinkedIn link */
+a[href^="https://de.linkedin.com/in/"]
+{
+  color: #1c3faa;
+  text-decoration: none;
+}
+
+a[href^="https://de.linkedin.com/in/"]:hover
+{
+  text-decoration: underline;
+}
+
+/* Padding for main content area to avoid overlap */
+main {
+  flex: 1;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  margin: 1vw;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto; /* This pushes the footer down */
+  background-color: var(--footer-background, #333);
+  text-align: center;
+  padding: var(--base-padding, 1em);
+  margin-bottom: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0; /* Ensure there is no margin pushing the footer down */
+}
+
+main {
+  flex: 1; /* This will make the main content expand to fill available space */
+  /* Removed padding-bottom here, ensure it's accounted for in the main content itself */
+  /* Adjust this value to provide space for the fixed navbar */
+}
+
+footer {
+  background-color: var(--footer-background, #333);
+  color: var(--text-color);
+  color: var(--text-color-fallback);
+  text-align: center;
+  padding: var(--base-padding, 1em);
+  margin-top: auto; /* This will push the footer to the bottom */
+}
+
+p code {
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+  color: var(--secondary-color-fallback);
+}
+
+button:hover {
+  /* Improved hover effect using color-mix with fallback */
+  background-color: var(--primary-color-fallback); /* Fallback for browsers that don't support color-mix */
+  background-color: var(--button-base-hover); /* Wider gamut color with color-mix() */
+  /* Additional hover styles */
+  transform: translateY(-2px); /* Slightly raise the button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Smooth transition for the hover effect */
+}
+
+main:has(section) {
+  padding: 0 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline {
+    margin: 50px auto;
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+
+  .text-box {
+    font-size: 13px;
+  }
+
+  .text-box small {
+    margin-bottom: 10px;
+  }
+
+  .right-container {
+    left: 0;
+  }
+
+  .left-container img,
+  right-container img {
+    left: 10px;
+  }
+
+  .left-container-arrow,
+  .right-container-arrow {
+    border-right: 15px solid #2e364a;
+    /* Dark color for the arrow */
+    border-left: 0;
+    left: -15px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+
+@media only screen and (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  /* Adjust font size and other styles for smaller screens */
+  body {
+    font-size: 14px;
+  }
+
+  /* Modify the header and footer styles */
+  header,
+  footer {
+    text-align: center;
+  }
+
+  /* Modify the timeline styles for smaller screens */
+  .timeline {
+    margin: 50px auto;
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+
+  .text-box {
+    font-size: 13px;
+  }
+
+  .text-box small {
+    margin-bottom: 10px;
+  }
+
+  .right-container {
+    left: 0;
+  }
+
+  .left-container img,
+  .right-container img {
+    left: 10px;
+  }
+
+  .left-container-arrow,
+  .right-container-arrow {
+    border-right: 15px solid #2e364a;
+    border-left: 0;
+    left: -15px;
+  }
+
+  /* Adjust the parallax background */
+  .parallax {
+    background-attachment: scroll;
+    height: 30vh;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+  /* Adjust font size and other styles for medium-sized screens */
+  body {
+    font-size: 16px;
+  }
+
+  /* Modify the parallax background for tablets */
+  .parallax {
+    height: 40vh;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  /* Add tablet landscape-specific styles here */
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  /* Additional styles for tablet landscape mode */
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+
+  /* Add tablet portrait-specific styles here */
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  /* Additional styles for tablet portrait mode */
+}
+
+@media screen and (min-width: 480px) and (max-width: 599px) {
+
+  /* Add mobile phone landscape-specific styles here */
+  body {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  /* Additional mobile phone landscape-specific styles */
+  /* For example: */
+
+  /* Additional styles for mobile phone landscape mode */
+}
+
+
+@media screen and (max-width: 479px) {
+
+  /* Add mobile phone portrait-specific styles here */
+  body {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+  /* Additional mobile phone portrait-specific styles */
+  /* For example: */
+
+  /* Additional styles for mobile phone portrait mode */
+}
+
+@media print {
+  body {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  /* Additional print-specific styles */
+  /* For example: */
+  a::after {
+    content: " (" attr(href) ")";
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  /* Select the first two <p> elements and hide them */
+  .typewriter h1 {
+    font-size: 0.45rem;
+    /* Adjust font size for small screens */
+  }
+
+  p:nth-of-type(-n+2) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  /* Adjust font size and other styles for smaller screens */
+  body {
+    font-size: 14px;
+  }
+
+  /* Modify the header and footer styles */
+  header,
+  footer {
+    text-align: center;
+  }
+
+  /* Modify the timeline styles for smaller screens */
+  .timeline {
+    margin: 50px auto;
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+
+  .text-box {
+    font-size: 13px;
+  }
+
+  .text-box small {
+    margin-bottom: 10px;
+  }
+
+  .right-container {
+    left: 0;
+  }
+
+  .left-container img,
+  .right-container img {
+    left: 10px;
+  }
+
+  .left-container-arrow,
+  .right-container-arrow {
+    border-right: 15px solid #2e364a;
+    border-left: 0;
+    left: -15px;
+  }
+
+  /* Adjust the parallax background */
+  .parallax {
+    background-attachment: scroll;
+    height: 30vh;
+  }
+
+  /* Adjust the contact form styles for smaller screens */
+  section#contact-info form {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  #contact {
+    max-width: 100%;
+  }
+
+  #contact-choice {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  input[type="submit"] {
+    font-size: 14px;
+  }
+
+  input#name {
+    font-size: 14px;
+  }
+
+  fieldset {
+    margin-bottom: 10px;
+  }
+
+  legend {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  textarea#comments {
+    font-size: 14px;
+  }
+}
+
+.youtube-video {
+  display: block; /* Makes the element a block element */
+  margin-left: auto; /* Automatic margin to the left */
+  margin-right: auto; /* Automatic margin to the right */
+}
+
+.education-table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; /* or a fixed width, depending on your design */
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #4caf50;
+    display: none;
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .navbar-menu li {
+    text-align: center;
+  }
+
+  .navbar-menu li a {
+    display: block;
+    padding: 1em;
+  }
+
+  /* Show the menu when the hidden checkbox is checked */
+  #hamburger-checkbox:checked ~ .navbar .navbar-menu {
+    display: flex;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+.navbar-menu {
+  display: flex;
+}
+
+/* Small screens: hide the full menu and show the hamburger icon */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  /* When the checkbox is checked, display the menu */
+  #hamburger-checkbox:checked ~ .navbar-menu {
+    display: flex;
+  }
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  font-size: 18px; /* Increased from the default 16px */
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5em 1em;
+  font-size: 1.2rem; /* Increased size for readability */
+}
+
+/* Similarly, you can adjust font sizes within media queries for responsive design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    font-size: 1rem; /* Larger icon for better touch targets on mobile */
+    cursor: pointer;
+  }
+
+  .navbar-menu li a {
+    font-size: 1rem; /* Larger font size for mobile navigation */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-logo img {
+    display: none;
+  }
+}
+
+main {
+  padding-top: 80px;
+  /* Adjust this value to provide space for the fixed navbar */
+  padding-bottom: 60px;
+  /* Adjust this value to provide space for the fixed footer */
+  flex: 1;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  margin: 1vw;
+}
+
+#contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#contact-info form {
+  width: 80%; /* Or max-width if you want it smaller */
+}
+
+.education-table {
+  margin: 2vh auto; /* Auto margins for horizontal centering */
+  width: 80%; /* Adjust the width as needed */
+}
+
+@media screen and (max-width: 600px) {
+  #timeline {
+    display: none;
+  }
+}
+
+/* Hide the education table and the iframe video on screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .education-table,
+  .youtube-video {
+    display: none;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section:not(#home):not(#map){
+  width: 80%; /* Or any other width as per your design */
+  max-width: 1200px; /* Or any other max-width as per your design */
+  margin: auto; /* This will center the section if it has a width */
+}
+
+.education-table,
+#contact-info form {
+  margin-left: auto;
+  margin-right: auto;
+  display: block; /* This overrides any flex or grid display types */
+}
+
+/* Optional: Adjust the width and max-width of the table and form as needed */
+.education-table {
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+}
+
+#contact-info form {
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    width: 90%; /* Increase the width on smaller screens for better readability */
+  }
+
+  .education-table,
+  .youtube-video,
+  #timeline {
+    display: none; /* Hide elements on small screens */
+  }
+
+  #contact-info form {
+    width: 90%; /* Adjust the width for small screens */
+  }
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("./freq.png");
+
+  /* Set the width to full viewport width */
+  width: 100vw; /* This will make the element as wide as the viewport */
+  
+  /* Maintain the height you want, for example: */
+  height: 50vh; /* Or any other value you prefer */
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
