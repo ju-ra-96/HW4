@@ -1,114 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <meta
-      name="description"
-      content="This is Julian Rahimi's portfolio page."
-    >
-    <meta
-      name="keywords"
-      content="julian rahimi, web developer, information systems graduate, tum, ucsd"
-    >
-    <meta property="og:title" content="Title of the webpage" >
-    <meta property="og:description" content="Julian Rahimi portfolio page" >
-    <meta
-      property="og:image"
-      content="URL-to-image-that-represents-the-content"
-    >
-    <meta property="og:url" content="URL of the actual page" >
-    <meta property="og:type" content="website" >
-    <title>Sample Website</title>
-    <link rel="stylesheet" href="styles.css" >
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    >
-    <script type="module" src="script.js"></script>
-    <style>
-      header {
-        background-color: #4caf50; /* A nice shade of green */
-        color: white; /* White text color for contrast */
-        padding: 1em; /* Some padding for spacing */
-        text-align: center; /* Centered text */
-        font-family: Arial, sans-serif; /* A basic, clean font */
-        border-radius: 5px; /* Slight rounding of corners for aesthetics */
-      }
-      nav ul {
-        display: flex;
-        list-style: none;
-      }
 
-      nav li {
-        padding-left: 1rem;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is Julian Rahimi's portfolio page.">
+  <meta name="keywords" content="julian rahimi, web developer, information systems graduate, tum, ucsd">
+  <meta property="og:title" content="Title of the webpage">
+  <meta property="og:description" content="Julian Rahimi portfolio page">
+  <meta property="og:image" content="URL-to-image-that-represents-the-content">
+  <meta property="og:url" content="URL of the actual page">
+  <meta property="og:type" content="website">
+  <title>Sample Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <script type="module" src="script.js"></script>
+  <style>
+    header {
+      background-color: #4caf50;
+      /* A nice shade of green */
+      color: white;
+      /* White text color for contrast */
+      padding: 1em;
+      /* Some padding for spacing */
+      text-align: center;
+      /* Centered text */
+      font-family: Arial, sans-serif;
+      /* A basic, clean font */
+      border-radius: 5px;
+      /* Slight rounding of corners for aesthetics */
+    }
 
-      .navbar-logo img {
-        height: 50px; /* Adjust the size as needed */
-        width: auto; /* Maintain aspect ratio */
-        margin-right: 10px; /* Space between logo and menu items */
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <label for="hamburger-checkbox" class="hamburger">
-        <i class="fa fa-bars"></i>
-      </label>
-      <input type="checkbox" id="hamburger-checkbox" style="display: none;">
-      <nav class="navbar">
-        <ul class="navbar-menu">
-          <li class="navbar-logo">
-            <img src="coding.png" alt="Logo" > 
-          </li>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#timeline">Timeline</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact-info">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
 
-    <main id="main-content">
-      <section id="home">
-        <div class="parallax">
-          <div class="typewriter">
-            <h1>Welcome to Julian Rahimi's Homepage</h1>
-          </div>
-          <picture>
-            <img
-              src="coffee.png"
-              alt="Julian Rahimi"
-              style="
-                max-width: 10%;
-                height: auto;
-                float: left;
-                margin-right: 1rem;
-              "
-            >
-          </picture>
-          <h2 style="color: white;">Introduction: Julian Rahimi</h2>
-          <p style="color: white">
-            Julian Rahimi is an
-            <span style="font-weight: bold"
-              >Information Systems Master's student</span
-            >
-            studying at the Technical University of Munich. He is currently
-            pursuing his studies abroad at the University of California, San
-            Diego.
-          </p>
-          <p style="color: white">
-            Julian is passionate about technology and looks forward to starting
-            his career after completing his 9-month study abroad program.
-          </p>
+    nav li {
+      padding-left: 1rem;
+    }
+
+    .navbar-logo img {
+      height: 50px;
+      /* Adjust the size as needed */
+      width: auto;
+      /* Maintain aspect ratio */
+      margin-right: 10px;
+      /* Space between logo and menu items */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <label for="hamburger-checkbox" class="hamburger">
+      <i class="fa fa-bars"></i>
+    </label>
+    <input type="checkbox" id="hamburger-checkbox" style="display: none;">
+    <nav class="navbar">
+      <ul class="navbar-menu">
+        <li class="navbar-logo">
+          <img src="coding.png" alt="Logo">
+        </li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact-info">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section id="home">
+      <div class="parallax">
+        <div class="typewriter">
+          <h1>Welcome to Julian Rahimi's Homepage</h1>
         </div>
-      </section>
-      <hr >
-      <h2><i>Portfolio</i></h2>
-        <section id="portfolio">
+        <picture>
+          <img src="coffee.png" alt="Julian Rahimi" style="
+                     max-width: 10%;
+                     height: auto;
+                     float: left;
+                     margin-right: 1rem;
+                     ">
+        </picture>
+        <h2 style="color: white;">Introduction: Julian Rahimi</h2>
+        <p style="color: white">
+          Julian Rahimi is an
+          <span style="font-weight: bold">Information Systems Master's student</span>
+          studying at the Technical University of Munich. He is currently
+          pursuing his studies abroad at the University of California, San
+          Diego.
+        </p>
+        <p style="color: white">
+          Julian is passionate about technology and looks forward to starting
+          his career after completing his 9-month study abroad program.
+        </p>
+      </div>
+    </section>
+    <hr>
+    <h2><i>Portfolio</i></h2>
+    <section id="portfolio">
       <h3>Github Overview</h3>
       <article class="project">
         <img src="creative-commons-nd.svg" alt="Project 1" height="48" width="48">
@@ -134,68 +127,66 @@
           </button>
         </div>
       </article>
-       </section>
-      <hr >
-      <section id="timeline">
-        <h2 style="margin-top: 0.5vh; margin-left: 4vh">Timeline</h2>
-        <div class="timeline">
-          <article class="container left-container">
-            <div class="text-box">
-              <h2>Alphabet Inc.</h2>
-              <small>2018 - 2019</small>
-              <p>bla bla bla</p>
-              <span class="left-container-arrow"></span>
-            </div>
-          </article>
-          <article class="container right-container">
-            <div class="text-box">
-              <h2>Alphabet Inc.</h2>
-              <small>2018 - 2019</small>
-              <p>bla bla bla</p>
-              <span class="right-container-arrow"></span>
-            </div>
-          </article>
-          <article class="container left-container">
-            <div class="text-box">
-              <h2>Alphabet Inc.</h2>
-              <small>2018 - 2019</small>
-              <p>bla bla bla</p>
-              <span class="left-container-arrow"></span>
-            </div>
-          </article>
-          <article class="container right-container">
-            <div class="text-box">
-              <h2>Alphabet Inc.</h2>
-              <small>2018 - 2019</small>
-              <p>bla bla bla</p>
-              <span class="right-container-arrow"></span>
-            </div>
-          </article>
-          <article class="container left-container">
-            <div class="text-box">
-              <h2>Alphabet Inc.</h2>
-              <small>2018 - 2019</small>
-              <p>bla bla bla</p>
-              <span class="left-container-arrow"></span>
-            </div>
-          </article>
-          <article class="container right-container">
-            <div class="text-box">
-              <h2>Alphabet Inc.</h2>
-              <small>2018 - 2019</small>
-              <p>bla bla bla</p>
-              <span class="right-container-arrow"></span>
-            </div>
-          </article>
-        </div>
-      </section>
-      <hr >
-    <section class="about">
+    </section>
+    <hr>
+    <section id="timeline">
+      <h2 style="margin-top: 0.5vh; margin-left: 4vh">Timeline</h2>
+      <div class="timeline">
+        <article class="container left-container">
+          <div class="text-box">
+            <h2>Alphabet Inc.</h2>
+            <small>2018 - 2019</small>
+            <p>bla bla bla</p>
+            <span class="left-container-arrow"></span>
+          </div>
+        </article>
+        <article class="container right-container">
+          <div class="text-box">
+            <h2>Alphabet Inc.</h2>
+            <small>2018 - 2019</small>
+            <p>bla bla bla</p>
+            <span class="right-container-arrow"></span>
+          </div>
+        </article>
+        <article class="container left-container">
+          <div class="text-box">
+            <h2>Alphabet Inc.</h2>
+            <small>2018 - 2019</small>
+            <p>bla bla bla</p>
+            <span class="left-container-arrow"></span>
+          </div>
+        </article>
+        <article class="container right-container">
+          <div class="text-box">
+            <h2>Alphabet Inc.</h2>
+            <small>2018 - 2019</small>
+            <p>bla bla bla</p>
+            <span class="right-container-arrow"></span>
+          </div>
+        </article>
+        <article class="container left-container">
+          <div class="text-box">
+            <h2>Alphabet Inc.</h2>
+            <small>2018 - 2019</small>
+            <p>bla bla bla</p>
+            <span class="left-container-arrow"></span>
+          </div>
+        </article>
+        <article class="container right-container">
+          <div class="text-box">
+            <h2>Alphabet Inc.</h2>
+            <small>2018 - 2019</small>
+            <p>bla bla bla</p>
+            <span class="right-container-arrow"></span>
+          </div>
+        </article>
+      </div>
+    </section>
+    <hr>
+    <section id="about">
       <div>
         <h2>About me</h2>
       </div>
-
-
       <section id="education">
         <h2>Educational Record</h2>
         <table class="education-table">
@@ -224,8 +215,6 @@
           </tbody>
         </table>
       </section>
-
-
       <section id="work-experience">
         <h2>Past Work Experience</h2>
         <ul class="work-experience-list">
@@ -252,87 +241,76 @@
           <!-- Add more list items for other work experiences -->
         </ul>
       </section>
-    <hr >
-    <section id="contact-info">
-      <h2>Contact Information</h2>
-      <form>
-        <label for="contact">Choose a contact method:</label>
-        <select name="contact" id="contact">
-          <optgroup label="Call">
-            <option value="phone">Phone</option>
-          </optgroup>
-          <optgroup label="Write">
-            <option value="email">Email</option>
-          </optgroup>
-        </select>
-        <br><br>
-        <input type="submit" value="Submit">
-      </form>
-      <p><a href="mailto:rahimi.julian@yahoo.de">Send me an Email</a></p>
-      <p>
-        LinkedIn:
-        <a href="https://de.linkedin.com/in/julian-rahimi" target="_blank" rel="noopener noreferrer">Julian Rahimi's
-          LinkedIn Profile</a>
-      </p>
-      <h3><strong>Send me a message</strong></h3>
-      <!-- Form Tags -->
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <fieldset>
-          <legend>Choose your preferred language:</legend>
-          <input type="radio" id="english" name="language" value="english" checked>
-          <label for="english">English</label><br>
-          <input type="radio" id="german" name="language" value="german">
-          <label for="german">German</label><br>
-        </fieldset>
-        <label for="comments">Message:</label>
-        <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
-        <input type="submit" value="Submit">
-      </form>
-    </section>
-    <hr >
-    <h2>My Home University</h2>
-    <aside>
-       <!-- Multimedia Tags -->
-       <iframe
-       class="youtube-video"
-         width="560"
-         height="315"
-         src="https://www.youtube.com/embed/riNBKby0hrM?si=Z8ulk0WlSiCUh_Pm"
-         title="YouTube video player"
-         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-         allowfullscreen
-       ></iframe>
-    </aside>
-    </main>
-    <hr >
-    <section id="map">
-      <h2>Map</h2>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d268549.3518176988!2d-117.161087!3d32.715736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d95409a3f6f735%3A0x4b9e6f5e813d36c3!2sSan%20Diego%2C%20CA%2C%20USA!5e0!3m2!1sen!2sde!4v1628311740272!5m2!1sen!2sde"
-        height="400" style="width:100%;border: 0;" allowfullscreen="" loading="lazy"></iframe>
-    </section>
-    <footer style="background-color: #4caf50; text-align: center; padding: 1em">
-      <div>
-        <a
-          href="https://github.com/ju-ra-96"
-          target="_blank"
-          style="color: white; font-size: 2.5em; margin-right: 0.5em"
-        >
-          <i class="fab fa-github"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/julian-rahimi"
-          target="_blank"
-          style="color: white; font-size: 2.5em; margin-right: 0.5em"
-        >
-          <i class="fab fa-linkedin"></i>
-        </a>
+      <hr>
+      <section id="contact-info">
+        <h2>Contact Information</h2>
+        <form>
+          <label for="contact">Choose a contact method:</label>
+          <select name="contact" id="contact">
+            <optgroup label="Call">
+              <option value="phone">Phone</option>
+            </optgroup>
+            <optgroup label="Write">
+              <option value="email">Email</option>
+            </optgroup>
+          </select>
+          <br><br>
+          <input type="submit" value="Submit">
+        </form>
+        <p><a href="mailto:rahimi.julian@yahoo.de">Send me an Email</a></p>
         <p>
-          <code> &copy; 2023 Julian Rahimi. All rights reserved. </code>
+          LinkedIn:
+          <a href="https://de.linkedin.com/in/julian-rahimi" target="_blank" rel="noopener noreferrer">Julian Rahimi's
+            LinkedIn Profile</a>
         </p>
-      </div>
-    </footer>
-  </body>
+        <h3><strong>Send me a message</strong></h3>
+        <!-- Form Tags -->
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <fieldset>
+            <legend>Choose your preferred language:</legend>
+            <input type="radio" id="english" name="language" value="english" checked>
+            <label for="english">English</label><br>
+            <input type="radio" id="german" name="language" value="german">
+            <label for="german">German</label><br>
+          </fieldset>
+          <label for="comments">Message:</label>
+          <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </section>
+      <hr>
+      <h2>My Home University</h2>
+      <aside>
+        <!-- Multimedia Tags -->
+        <iframe class="youtube-video" width="560" height="315"
+          src="https://www.youtube.com/embed/riNBKby0hrM?si=Z8ulk0WlSiCUh_Pm" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </aside>
+  </main>
+  <hr>
+  <section id="map">
+    <h2>Map</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d268549.3518176988!2d-117.161087!3d32.715736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d95409a3f6f735%3A0x4b9e6f5e813d36c3!2sSan%20Diego%2C%20CA%2C%20USA!5e0!3m2!1sen!2sde!4v1628311740272!5m2!1sen!2sde"
+      height="400" style="width:100%;border: 0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+  <footer style="background-color: #4caf50; text-align: center; padding: 1em">
+    <div>
+      <a href="https://github.com/ju-ra-96" target="_blank" style="color: white; font-size: 2.5em; margin-right: 0.5em">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/julian-rahimi" target="_blank"
+        style="color: white; font-size: 2.5em; margin-right: 0.5em">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <p>
+        <code> &copy; 2023 Julian Rahimi. All rights reserved. </code>
+      </p>
+    </div>
+  </footer>
+</body>
+
 </html>
