@@ -138,20 +138,7 @@ body {
   animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
-.parallax {
-  /* The image used */
-  background-image: url("./freq.png");
 
-  /* Full height */
-  height: 50vh;
-  width: 100%;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .navbar {
   position: relative;
@@ -1483,4 +1470,98 @@ section:not(#home):not(#map){
 
 h2 {
   text-align: center;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("./freq.png");
+
+  /* Full height */
+  height: 50vh;
+  width: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  header,
+  footer {
+    /* Simplify header and footer for smaller screens */
+    text-align: center;
+    padding: 1em;
+  }
+
+  .navbar-menu {
+    /* Adjust navbar for small screens */
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .navbar-menu li a {
+    /* Make navbar links full width for easier touch */
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .hamburger {
+    /* Make sure hamburger menu is visible */
+    display: block;
+  }
+
+  .navbar-logo img,
+  .education-table,
+  .youtube-video,
+  #timeline {
+    /* Hide elements not essential for smaller screens */
+    display: none;
+  }
+
+  .typewriter h1 {
+    /* Adjust typewriter effect font size */
+    font-size: 0.8rem;
+  }
+
+  .parallax {
+    /* Adjust parallax for better performance on mobile */
+    background-attachment: scroll;
+    height: 30vh; /* Make the parallax section smaller */
+  }
+
+  main,
+  section {
+    /* Make main content and sections take full width */
+    width: 100%;
+    padding: 0 15px; /* Add some padding */
+  }
+
+  #contact-info form,
+  .education-table {
+    /* Make forms and tables full width for better readability */
+    width: 100%;
+    max-width: none;
+  }
+
+  h2 {
+    /* Adjust heading for better readability */
+    font-size: 1.2rem;
+  }
+}
+
+/* Override styles for small screens */
+@media screen and (max-width: 600px) {
+  section:not(#home):not(#map) {
+    width: 100%; /* Full width for better readability on small screens */
+    max-width: none; /* Remove the max-width restriction */
+    margin: 0; /* Remove auto margins if any padding is needed for small screens */
+    padding: 0 15px; /* Optional padding for some breathing room on the sides */
+  }
 }
