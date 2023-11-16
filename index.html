@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="This is Julian Rahimi's portfolio page."
-   >
+    />
     <meta
       name="keywords"
       content="julian rahimi, web developer, information systems graduate, tum, ucsd"
-   >
-    <meta property="og:title" content="Title of the webpage">
-    <meta property="og:description" content="Julian Rahimi portfolio page">
+    />
+    <meta property="og:title" content="Title of the webpage" />
+    <meta property="og:description" content="Julian Rahimi portfolio page" />
     <meta
       property="og:image"
       content="URL-to-image-that-represents-the-content"
-   >
-    <meta property="og:url" content="URL of the actual page">
-    <meta property="og:type" content="website">
+    />
+    <meta property="og:url" content="URL of the actual page" />
+    <meta property="og:type" content="website" />
     <title>Sample Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-   >
+    />
     <script type="module" src="script.js"></script>
     <style>
       header {
@@ -68,11 +68,11 @@
       <label for="hamburger-checkbox" class="hamburger">
         <i class="fa fa-bars"></i>
       </label>
-      <input type="checkbox" id="hamburger-checkbox" style="display: none">
+      <input type="checkbox" id="hamburger-checkbox" style="display: none" />
       <nav class="navbar">
         <ul class="navbar-menu">
           <li class="navbar-logo">
-            <img src="coding.png" alt="Logo">
+            <img src="coding.png" alt="Logo" />
           </li>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -98,7 +98,7 @@
                 float: left;
                 margin-right: 1rem;
               "
-           >
+            />
           </picture>
           <h2 style="color: white">Introduction: Julian Rahimi</h2>
           <p style="color: white">
@@ -116,8 +116,8 @@
           </p>
         </div>
       </section>
-      <hr>
-      <h2><i>Portfolio</i></h2>
+      <hr />
+      <h2>Portfolio</h2>
       <section id="portfolio">
         <h3>Github Overview</h3>
         <article class="project">
@@ -126,7 +126,7 @@
             alt="Project 1"
             height="48"
             width="48"
-         >
+          />
           <div class="project-info">
             <h3>Blockchain LAB at TUM</h3>
             <p>
@@ -146,7 +146,7 @@
             alt="Project 2"
             height="48"
             width="48"
-         >
+          />
           <div class="project-info">
             <h3>EasyPick SEBA TUM project</h3>
             <p>
@@ -167,7 +167,7 @@
           </div>
         </article>
       </section>
-      <hr>
+      <hr />
       <section id="timeline">
         <h2 style="margin-top: 0.5vh; margin-left: 4vh">Timeline</h2>
         <div class="timeline">
@@ -221,11 +221,40 @@
           </article>
         </div>
       </section>
-      <hr>
+      <hr />
       <section id="about">
-        <div>
-          <h2>About me</h2>
-        </div>
+        <article class="project card">
+          <div>
+            <h2>My Skills</h2>
+          </div>
+          <div class="skills-section">
+            <div class="row">
+              <div class="skill html"><i class="fab fa-html5"></i> HTML</div>
+              <div class="skill css"><i class="fab fa-css3-alt"></i> CSS</div>
+            </div>
+            <div class="row">
+              <div class="skill react">
+                <i class="fab fa-react"></i> React JS
+              </div>
+              <div class="skill angular">
+                <i class="fab fa-angular"></i> Angular
+              </div>
+            </div>
+            <div class="row">
+              <div class="skill ios">
+                <i class="fab fa-app-store-ios"></i> iOS App
+              </div>
+              <div class="skill app-dev">
+                <i class="fab fa-dev"></i> App Dev
+              </div>
+            </div>
+            <a href="mailto:rahimi.julian@yahoo.de" class="contact-btn">
+              <i class="fas fa-paper-plane"></i> Contact Now
+            </a>
+          </div>
+        </article>
+        <br />
+        <hr />
         <section id="education">
           <h2>Educational Record</h2>
           <table class="education-table">
@@ -283,7 +312,7 @@
           </ul>
         </section>
       </section>
-      <hr>
+      <hr />
       <section id="contact-info">
         <h2>Contact Information</h2>
         <form>
@@ -296,8 +325,8 @@
               <option value="email">Email</option>
             </optgroup>
           </select>
-          <br><br>
-          <input type="submit" value="Submit">
+          <br /><br />
+          <input type="submit" value="Submit" />
         </form>
         <p><a href="mailto:rahimi.julian@yahoo.de">Send me an Email</a></p>
         <p>
@@ -313,7 +342,7 @@
         <!-- Form Tags -->
         <form>
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" required />
           <fieldset>
             <legend>Choose your preferred language:</legend>
             <input
@@ -322,17 +351,17 @@
               name="language"
               value="english"
               checked
-           >
-            <label for="english">English</label><br>
-            <input type="radio" id="german" name="language" value="german">
-            <label for="german">German</label><br>
+            />
+            <label for="english">English</label><br />
+            <input type="radio" id="german" name="language" value="german" />
+            <label for="german">German</label><br />
           </fieldset>
           <label for="comments">Message:</label>
           <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
-          <input type="submit" value="Submit">
+          <input type="submit" value="Submit" />
         </form>
       </section>
-      <hr>
+      <hr />
       <h2>My Home University</h2>
       <aside>
         <!-- Multimedia Tags -->
@@ -347,7 +376,7 @@
         ></iframe>
       </aside>
     </main>
-    <hr>
+    <hr />
     <section id="map">
       <h2>Map</h2>
       <iframe

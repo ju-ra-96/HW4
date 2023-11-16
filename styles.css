@@ -1565,3 +1565,277 @@ h2 {
     padding: 0 15px; /* Optional padding for some breathing room on the sides */
   }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+.skills-section {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This will center the button as well */
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Ensures the row takes full width of the skills-section */
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  width: 47%; /* Adjusted for slightly less space between the two skill rectangles */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in the width */
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  margin: 1.5% 1.5%; /* Half the previous space on each side to make it centered */
+}
+
+.skill i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.html { background-color: #e34c26; }
+.css { background-color: #1572B6; }
+.react { background-color: #61DAFB; }
+.angular { background-color: #DD0031; }
+.ios { background-color: #999999; }
+.app-dev { background-color: #4CAF50; }
+
+.contact-btn {
+  background-color: #0a0a0a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-btn i {
+  margin-right: 5px;
+}
+
+.contact-btn, .contact-btn:visited {
+  text-decoration: none;
+  background-color: #0a0a0a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  display: inline-flex; /* Changed to inline-flex for proper alignment */
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-btn:hover, .contact-btn:focus {
+  color: white;
+  text-decoration: none;
+  /* You can add hover effects here */
+}
+
+.contact-btn, 
+.contact-btn:visited, /* This targets the link in its visited state */
+.contact-btn:hover, /* This targets the link on hover */
+.contact-btn:focus { /* This targets the link when it is focused */
+  text-decoration: none; /* Removes underline */
+  background-color: #0a0a0a;
+  color: white; /* Ensures text is white */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.contact-btn, 
+a.contact-btn:visited, /* Targets unvisited and visited state of the link */
+a.contact-btn:hover, /* Targets the link on hover */
+a.contact-btn:focus { /* Targets the link when it is focused */
+  text-decoration: none; /* Removes underline */
+  background-color: #0a0a0a; /* Background color for the button */
+  color: white !important; /* Ensures text is white, !important to override any other styles */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s; /* Optional: Adds transition for the background color */
+}
+
+/* Optional: add :active state if you want to style the button when it's clicked */
+a.contact-btn:active {
+  background-color: #333; /* Darker background on click */
+}
+
+/* Optional: Style for when the button is focused with keyboard navigation */
+a.contact-btn:focus {
+  outline: none; /* Removes the default focus outline */
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #0a0a0a; /* Custom focus style */
+}
+
+.card {
+  background-color: #f0faff; /* A light blue tint */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for 3D effect */
+  margin: 1rem; /* Space around card */
+  padding: 1rem; /* Padding inside card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slightly raise card on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.project-2 img {
+  width: 100%; /* Full width of card */
+  height: auto; /* Maintain aspect ratio */
+  border-top-left-radius: 10px; /* Round top corners */
+  border-top-right-radius: 10px;
+}
+
+.project-info-2 {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Mono', monospace;
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: #4caf50;
+  margin-top: 2rem;
+}
+
+section {
+  padding: 2rem 5%;
+  border-bottom: 1px solid #eaeaea;
+}
+
+section:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.navbar-menu li a {
+  font-size: 1rem;
+  color: white;
+  padding: 0.5em 1em;
+}
+
+.project, .card {
+  background-color: #f1f4fb;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 1.5rem 10px;
+  }
+
+  .navbar-menu li a {
+    font-size: 0.9rem;
+  }
+}
+
+.skills-section {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 25vw; /* Full width */
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px; /* Add some margin at the bottom */
+}
+
+.skill i {
+  margin-right: 10px;
+}
+
+/* Define background colors for each skill */
+.html { background-color: #e34c26; }
+.css { background-color: #1572B6; }
+.react { background-color: #61DAFB; }
+.angular { background-color: #DD0031; }
+.ios { background-color: #999999; }
+.app-dev { background-color: #4CAF50; }
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .skill {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
