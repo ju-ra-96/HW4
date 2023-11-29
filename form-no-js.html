@@ -1,0 +1,109 @@
+<style>
+    input:invalid, textarea:invalid {
+  border: 2px solid red;
+}
+
+input:valid, textarea:valid {
+  border: 2px solid green;
+}
+
+input:required:placeholder-shown,
+textarea:required:placeholder-shown {
+  border: 2px solid blue;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* This will style the input fields when they contain invalid data */
+input:invalid, textarea:invalid {
+  border: 2px solid red;
+  background-color: #ffcccc;
+}
+
+/* This will style the input fields when they contain valid data */
+input:valid, textarea:valid {
+  border: 2px solid green;
+  background-color: #ccffcc;
+}
+
+/* This will style the input fields when they are required and placeholder text is shown */
+input:required:placeholder-shown,
+textarea:required:placeholder-shown {
+  border: 2px solid blue;
+  background-color: #cce4ff;
+}
+
+/* Additional styles */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.5em;
+}
+
+input, textarea {
+  margin-bottom: 0.5em;
+}
+
+button[type="submit"] {
+  padding: 0.5em;
+  border: none;
+  background-color: #007bff;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+</style>
+<form novalidate>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments" required minlength="20" maxlength="200" pattern="[\w\s,.!?-]*"></textarea>
+    </div>
+    
+    <button type="submit">Submit</button>
+  </form>
+  
