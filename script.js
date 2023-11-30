@@ -241,3 +241,22 @@ function saveTheme() {
       localStorage.setItem("themes", JSON.stringify(themes));
   }
 }
+
+// Event listener for the theme toggle button
+document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+
+// Event listener for the theme picker save button
+document.getElementById('save-theme').addEventListener('click', saveTheme);
+
+// Apply the saved theme on page load
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('selectedTheme');
+  if (savedTheme) {
+    const parsedTheme = JSON.parse(savedTheme);
+    themeSelect.value = parsedTheme.name;
+    textColorPicker.value = parsedTheme.textColor;
+    bgColorPicker.value = parsedTheme.backgroundColor;
+    fontSelect.value = parsedTheme.fontSet;
+    applySelectedTheme();
+  }
+});

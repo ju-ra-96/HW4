@@ -22,7 +22,7 @@
         }
 
         input:valid, textarea:valid {
-            border-color: green=;
+            border-color: green;
         }
 
         input:invalid:required:placeholder-shown, textarea:invalid:required:placeholder-shown {
@@ -68,7 +68,7 @@
 
         <div class="form-group">
             <label for="comments">Comments:</label>
-            <textarea id="comments" name="comments" required minlength="20" maxlength="200" pattern="[\w\s,.!?-]*" placeholder="Enter your comments (20-200 characters)"></textarea>
+            <textarea id="comments" name="comments" required minlength="20" maxlength="200" placeholder="Enter your comments (20-200 characters)"></textarea>
             <span class="error-message">Comments must be 20-200 characters long and contain only typical characters</span>
         </div>
 
