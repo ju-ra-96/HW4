@@ -69,16 +69,11 @@
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact-info">Contact</a></li>
       </ul>
-      <div class="theme-switcher-container">
-        <i id="theme-switcher" class="fas fa-sun"></i> <!-- Default icon for light mode -->
+      <button id="theme-toggle">🌜</button>
+      <noscript>JavaScript is required for theme toggle functionality.</noscript>
       </div>
     </nav>
   </header>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- ... other head elements ... -->
-</head>
 <body>
   <noscript>
     <div class="noscript-message">
@@ -321,11 +316,12 @@
       <hr>
      
       <!-- Form Tags -->
-      <form class="form-container centered-form" id="myForm" action="https://httpbin.org/post" method="post" onsubmit="submitForm()">
+      <form class="form-container centered-form" id="myForm" action="https://httpbin.org/post" method="post" novalidate>
         <h3>Send me a message</h3>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" oninput="validateName()" required pattern="^[A-Za-z]+(?: [A-Za-z]+)*$">
-        <output name="nameError" for="name"></output>
+        <div id="nameError" class="error-message"></div>
+
        
         
         
@@ -334,9 +330,9 @@
       
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" oninput="validateEmail()" required 
-               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-               title="Please enter a valid email address.">
-               <output name="emailError" for="email"></output>
+        pattern="[a-z0-9._%+\-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        title="Please enter a valid email address."> 
+        <div id="emailError" class="error-message"></div>
       
         
 
@@ -381,7 +377,7 @@
         <i class="fab fa-linkedin"></i>
       </a>
       <p>
-        <code> &copy; 2023 Julian Rahimi. All rights reserved. </code>
+        <code> &copy; 2023 Julian Rahimi. All rights reserved.</code>
       </p>
     </div>
   </footer>
