@@ -2293,3 +2293,115 @@ input.invalid {
     visibility: hidden;
   }
 }
+
+/* Style for the theme picker */
+#theme-picker {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Style for the theme selector */
+#theme-select {
+  width: 120px;
+}
+
+/* Style for text color picker */
+#text-color-picker {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+}
+
+/* Style for background color picker */
+#bg-color-picker {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+}
+
+/* Style for font selector */
+#font-select {
+  width: 150px;
+}
+
+/* Style for the dark theme */
+.dark-theme {
+  background-color: black;
+  color: white;
+}
+
+/* Style for invalid input */
+.invalid {
+  border-color: red;
+}
+
+/* Style for error messages */
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+/* Style for flashing error */
+.flash-error {
+  animation: flash 3s ease-in-out;
+}
+
+@keyframes flash {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Style for warning */
+.warning {
+  color: yellow;
+}
+
+/* Style for error */
+.error {
+  color: red;
+}
+
+/* Style for the form container */
+#form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+
+/* Style for the submit button */
+#submit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover style for the submit button */
+#submit-button:hover {
+  background-color: #0056b3;
+}
+
+#theme-picker {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}

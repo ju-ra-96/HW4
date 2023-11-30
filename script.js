@@ -155,3 +155,89 @@ function showError(input, message) {
     input.classList.remove('invalid');
   }, 6000);
 }
+
+ // Theme objects with default values
+ const themes = [
+  {
+      name: "Default",
+      textColor: "black",
+      backgroundColor: "white",
+      fontSet: "Arial, sans-serif",
+  },
+  {
+      name: "Dark Mode",
+      textColor: "white",
+      backgroundColor: "black",
+      fontSet: "Verdana, sans-serif",
+  },
+  // Add more theme objects as needed
+];
+
+// Theme picker elements
+const themeSelect = document.getElementById("theme-select");
+const textColorPicker = document.getElementById("text-color-picker");
+const bgColorPicker = document.getElementById("bg-color-picker");
+const fontSelect = document.getElementById("font-select");
+const saveThemeButton = document.getElementById("save-theme");
+
+// Load themes from local storage on page load
+document.addEventListener("DOMContentLoaded", () => {
+  loadThemes();
+  applySelectedTheme();
+});
+
+// Event listener for theme selection
+themeSelect.addEventListener("change", applySelectedTheme);
+
+// Event listener for save theme button
+saveThemeButton.addEventListener("click", saveTheme);
+
+// Load themes from local storage
+function loadThemes() {
+  const savedThemes = JSON.parse(localStorage.getItem("themes"));
+  if (savedThemes) {
+      themes.push(...savedThemes);
+      updateThemeSelect();
+  }
+}
+
+// Update the theme selection dropdown
+function updateThemeSelect() {
+  themeSelect.innerHTML = "";
+  themes.forEach((theme) => {
+      const option = document.createElement("option");
+      option.value = theme.name;
+      option.textContent = theme.name;
+      themeSelect.appendChild(option);
+  });
+}
+
+// Apply the selected theme
+function applySelectedTheme() {
+  const selectedThemeName = themeSelect.value;
+  const selectedTheme = themes.find((theme) => theme.name === selectedThemeName);
+
+  if (selectedTheme) {
+      // Apply theme styles to the page
+      document.body.style.color = selectedTheme.textColor;
+      document.body.style.backgroundColor = selectedTheme.backgroundColor;
+      document.body.style.fontFamily = selectedTheme.fontSet;
+  }
+}
+
+// Save the current theme
+function saveTheme() {
+  const themeName = prompt("Enter a name for the theme:");
+  if (themeName) {
+      const newTheme = {
+          name: themeName,
+          textColor: textColorPicker.value,
+          backgroundColor: bgColorPicker.value,
+          fontSet: fontSelect.value,
+      };
+
+      themes.push(newTheme);
+      updateThemeSelect();
+      localStorage.setItem("themes", JSON.stringify(themes));
+  }
+}

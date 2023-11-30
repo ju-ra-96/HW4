@@ -70,19 +70,48 @@
         <li><a href="#contact-info">Contact</a></li>
       </ul>
       <button id="theme-toggle">🌜</button>
-      <noscript>JavaScript is required for theme toggle functionality.</noscript>
+      <button id="theme-toggle-button">Toggle Theme</button>
+
+      <div id="theme-toggle-message">
+        <p>Toggle Theme</p>
+        <noscript>JavaScript is required for theme toggle functionality.</noscript>      
       </div>
     </nav>
   </header>
-<body>
   <noscript>
     <div class="noscript-message">
       <p>JavaScript is not enabled in your browser. Some features on this website will not work correctly without JavaScript, such as theme switching.</p>
     </div>
   </noscript>
-</body>
-</html>
+  <h1>Theme Picker</h1>
 
+    <!-- Theme Picker UI -->
+    <div id="theme-picker">
+        <label for="theme-select">Select Theme:</label>
+        <select id="theme-select"></select>
+
+        <div>
+            <label for="text-color-picker">Text Color:</label>
+            <input type="color" id="text-color-picker">
+        </div>
+
+        <div>
+            <label for="bg-color-picker">Background Color:</label>
+            <input type="color" id="bg-color-picker">
+        </div>
+
+        <div>
+            <label for="font-select">Font Set:</label>
+            <select id="font-select">
+                <option value="Arial, sans-serif">Arial, sans-serif</option>
+                <option value="Verdana, sans-serif">Verdana, sans-serif</option>
+                <option value="Times New Roman, serif">Times New Roman, serif</option>
+                <!-- Add more font options as needed -->
+            </select>
+        </div>
+
+        <button id="save-theme">Save Theme</button>
+    </div>
   <main id="main-content">
     <section id="home">
       <div class="parallax">
