@@ -316,17 +316,13 @@
       <hr>
      
       <!-- Form Tags -->
-      <form class="form-container centered-form" id="myForm" action="https://httpbin.org/post" method="post" novalidate>
+      <form class="form-container centered-form" id="myForm" action="https://httpbin.org/post" method="post">
         <h3>Send me a message</h3>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" oninput="validateName()" required pattern="^[A-Za-z]+(?: [A-Za-z]+)*$">
         <div id="nameError" class="error-message"></div>
 
        
-        
-        
-
-        <span class="error-message">error</span>
       
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" oninput="validateEmail()" required 

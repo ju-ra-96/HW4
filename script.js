@@ -6,6 +6,17 @@ function validateName() {
   const nameInput = document.getElementById("name");
   const nameErrorDiv = document.getElementById("nameError");
 
+  const namePattern = /^[A-Za-z\s]*$/; // Pattern allows only letters and spaces
+  
+  // Check if the input value matches the pattern
+  if (!namePattern.test(nameInput.value)) {
+    showError(nameInput, "Only letters and spaces are allowed.");
+    /* nameInput.value = nameInput.value.replace(/[^A-Za-z\s]/g, ''); // Remove invalid characters */
+  } else {
+    // If valid, reset custom validity and continue with other validations
+    nameInput.setCustomValidity("");
+  }
+
   if (!nameInput.validity.valid) {
     const errorMessage = nameInput.validationMessage;
     nameInput.classList.add("invalid");
@@ -24,6 +35,16 @@ function validateName() {
 function validateEmail() {
   const emailInput = document.getElementById("email");
   const emailErrorDiv = document.getElementById("emailError");
+  const emailPattern = /^[a-z0-9._%+\-]+@[a-z0-9.-]+\.[a-z]{2,}$/; // Pattern for a basic email structure
+  
+  // Check if the input value matches the pattern
+  if (!emailPattern.test(emailInput.value)) {
+    showError(emailInput, "Please enter a valid email address.");
+    // Don't remove characters here, as it might interfere with email input
+  } else {
+    // If valid, reset custom validity and continue with other validations
+    emailInput.setCustomValidity("");
+  }
 
   if (!emailInput.validity.valid) {
     const errorMessage = emailInput.validationMessage;
@@ -119,3 +140,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('theme-toggle').textContent = '🌜';
   }
 });
+
+function showError(input, message) {
+  const errorDiv = input.nextElementSibling; // This expects the error div to be right after each input
+  errorDiv.textContent = message;
+  errorDiv.classList.add('error-message', 'flash-error'); // Add both 'error-message' and 'flash-error' classes
+  
+  input.classList.add('invalid'); // Add 'invalid' class to the input field
+  
+  // Remove the error after 6 seconds
+  setTimeout(() => {
+    errorDiv.textContent = '';
+    errorDiv.classList.remove('error-message', 'flash-error');
+    input.classList.remove('invalid');
+  }, 6000);
+}

@@ -2247,3 +2247,49 @@ body {
   border: none;
   background: none;
 }
+
+.error-message {
+  color: red;
+  display: none; /* Hidden by default */
+  /* Additional styling */
+}
+
+.error-message.active {
+  display: block; /* Shown when there's an error */
+}
+
+
+/* Add styles for the flash effect and error message */
+.flash-error {
+  animation: flashAnimation 2s alternate 4;
+}
+
+@keyframes flashAnimation {
+  from { background-color: inherit; }
+  to { background-color: #ffdddd; }
+}
+
+.error-message {
+  color: red;
+  display: block; /* Make sure it's visible */
+  opacity: 1;
+  transition: opacity 6s ease-out; /* Fades the message out */
+}
+
+/* Style for input fields with invalid class */
+input.invalid {
+  border: 1px solid red;
+  background-color: #ffdddd;
+}
+
+/* Fade out the error message after 3 seconds */
+.error-message.flash-error {
+  animation: fadeOut 6s forwards; /* 'forwards' keeps the final state after the animation */
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
