@@ -2405,3 +2405,8 @@ label {
   display: block;
   margin-bottom: 5px;
 }
+
+/* Hide the theme picker container by default */
+#theme-picker {
+  display: none;
+}
