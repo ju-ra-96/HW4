@@ -321,12 +321,13 @@
       <hr>
      
       <!-- Form Tags -->
-      <form class="form-container centered-form" id="myForm" action="https://httpbin.org/post" method="post">
+      <form class="form-container centered-form" id="myForm" action="https://httpbin.org/post" method="post" onsubmit="submitForm()">
         <h3>Send me a message</h3>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" oninput="validateName()" required pattern="!/^[a-z][A-Z]+$/">
+        <input type="text" id="name" name="name" oninput="validateName()" required pattern="^[A-Za-z]+(?: [A-Za-z]+)*$">
         <output name="nameError" for="name"></output>
-        <div id="nameError" style="color: red;"></div>
+       
+        
         
 
         <span class="error-message">error</span>
@@ -336,7 +337,7 @@
                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
                title="Please enter a valid email address.">
                <output name="emailError" for="email"></output>
-        <div id="emailError" style="color: red;"></div>
+      
         
 
       
@@ -344,6 +345,10 @@
         <textarea id="comments" name="comments" rows="4" cols="40" maxlength="200"></textarea>
 <output id="infoOutput"></output>
       
+<!-- Add this hidden input field for form errors -->
+<input type="hidden" id="form-errors-input" name="form-errors" value="" />
+
+
         <input type="hidden" name="possible_bot" value="true" />
       
         <input type="submit" value="Submit" />

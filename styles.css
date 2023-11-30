@@ -2128,7 +2128,7 @@ body.dark-theme {
 }
 
 .warning {
-  color: red;
+  color: orange;
   /* More styling as needed */
 }
 
@@ -2165,4 +2165,48 @@ body.dark-theme {
 
 .contact-form output {
   height: 20px;
+}
+
+/* Basic Styles */
+label, input, .error-message {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for invalid input */
+input.invalid {
+  border-color: red;
+  background-color: #ffcccc;
+}
+
+/* Style for error message */
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  display: none; /* Hide by default */
+}
+
+/* Show error message when there is content */
+.error-message.active {
+  display: block;
+}
+
+.comment-info {
+  margin-top: 5px;
+  color: #333; /* Default text color */
+}
+
+.comment-info.warning {
+  color: orange; /* Warning text color */
+}
+
+.comment-info.error {
+  color: red; /* Error text color */
 }

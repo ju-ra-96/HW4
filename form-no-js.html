@@ -1,109 +1,78 @@
-<style>
-    input:invalid, textarea:invalid {
-  border: 2px solid red;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Without JavaScript</title>
+    <style>
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
 
-input:valid, textarea:valid {
-  border: 2px solid green;
-}
+        input:required, textarea:required {
+            border-color: blue;
+        }
 
-input:required:placeholder-shown,
-textarea:required:placeholder-shown {
-  border: 2px solid blue;
-}
+        input:invalid, textarea:invalid {
+            border-color: red;
+        }
 
-.form-group {
-  margin-bottom: 15px;
-}
+        input:valid, textarea:valid {
+            border-color: green=;
+        }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-}
+        input:invalid:required:placeholder-shown, textarea:invalid:required:placeholder-shown {
+            border-color: blue;
+        }
 
-input, textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+        .error-message {
+            color: red;
+            display: none;
+        }
 
-button[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+        input:invalid + .error-message, textarea:invalid + .error-message {
+            display: block;
+        }
 
-button[type="submit"]:hover {
-  background-color: #45a049;
-}
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
-/* This will style the input fields when they contain invalid data */
-input:invalid, textarea:invalid {
-  border: 2px solid red;
-  background-color: #ffcccc;
-}
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://httpbin.org/post" method="post" novalidate>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+            <span class="error-message">Name is required</span>
+        </div>
 
-/* This will style the input fields when they contain valid data */
-input:valid, textarea:valid {
-  border: 2px solid green;
-  background-color: #ccffcc;
-}
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+            <span class="error-message">Please enter a valid email address</span>
+        </div>
 
-/* This will style the input fields when they are required and placeholder text is shown */
-input:required:placeholder-shown,
-textarea:required:placeholder-shown {
-  border: 2px solid blue;
-  background-color: #cce4ff;
-}
+        <div class="form-group">
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" required minlength="20" maxlength="200" pattern="[\w\s,.!?-]*" placeholder="Enter your comments (20-200 characters)"></textarea>
+            <span class="error-message">Comments must be 20-200 characters long and contain only typical characters</span>
+        </div>
 
-/* Additional styles */
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin-bottom: 0.5em;
-}
-
-input, textarea {
-  margin-bottom: 0.5em;
-}
-
-button[type="submit"] {
-  padding: 0.5em;
-  border: none;
-  background-color: #007bff;
-  color: white;
-}
-
-button[type="submit"]:hover {
-  background-color: #0056b3;
-}
-
-
-</style>
-<form novalidate>
-    <div class="form-group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-    
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-    
-    <div class="form-group">
-      <label for="comments">Comments:</label>
-      <textarea id="comments" name="comments" required minlength="20" maxlength="200" pattern="[\w\s,.!?-]*"></textarea>
-    </div>
-    
-    <button type="submit">Submit</button>
-  </form>
-  
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
